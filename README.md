@@ -10,7 +10,7 @@ Sam(Semi-Automatic-Machine) is a prototype open source voice assistant able to a
 * pip
 
 
-If you're on mac you can install `portaudio` using `homebrew`
+If you're on mac or linux you can install `pyaudio` using `pip install PyAudio`
 
 **NOTICE: If you are using windows installing pyaudio is using pip is broken from python 3.6 and above. to install pyaudio you can use the whl file included in project**
 
