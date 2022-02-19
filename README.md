@@ -30,6 +30,8 @@ If you're on mac or linux you can install `pyaudio` using `pip install PyAudio`
 2. `pip install PyAudio-0.2.11-cp39-cp39-win_amd64.whl`
 
 To run the assistant you need to create an account at [picovoice website](https://console.picovoice.ai/) and get and access key from the console but after that the Assistant entirely runs offline on your system.
+----
+Create a config.py file and 
 
 
 ### Running the assistant
@@ -45,8 +47,15 @@ To run the assistant you need to create an account at [picovoice website](https:
 (all commands can be uttered in any combination as we are using a speech to intent system)
 
 
->supported commands:   (new commands comming soon)
+## (new commands comming soon)
+
+>supported commands: (All commmands
+support different uttrances check yaml files of rhino for extra details)
+
+
+
 
 1. what's the time
 1. what's the date
+1. 
 
