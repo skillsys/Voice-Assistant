@@ -20,6 +20,9 @@ If you're on mac or linux you can install `pyaudio` using `pip install PyAudio`
 2. `cd voiceAssistantenv\scripts\`
 2. `.\activate`
 
+clone the repo using 
+
+`git clone https://github.com/skillsys/Voice-Assistant.git`
 ### pip packages
 `cd Voice-Assistant`
 
@@ -31,7 +34,12 @@ If you're on mac or linux you can install `pyaudio` using `pip install PyAudio`
 
 To run the assistant you need to create an account at [picovoice website](https://console.picovoice.ai/) and get and access key from the console but after that the Assistant entirely runs offline on your system.
 ----
-Create a config.py file and 
+Create a config.py file in project directory 
+paste the following
+
+```python
+access_key = "your accesskey"
+```
 
 
 ### Running the assistant

@@ -2,18 +2,18 @@ from asyncio.windows_events import ERROR_CONNECTION_REFUSED
 import struct
 import pyaudio
 import pvporcupine
-import config
+from config import access_key
 
 porcupine = None
 pa = None
 audio_stream = None
-access_key = config.access_key
-keywords_path = config.keywords_path
+
+
 sen = [0.5]
 
 
 try:
-    porcupine = pvporcupine.create(access_key=access_key , keyword_paths=keywords_path , sensitivities=sen)
+    porcupine = pvporcupine.create(access_key=access_key , keyword_paths=['.\\Ai_models\\hey-sam_en_windows.ppn'] , sensitivities=sen)
 
     pa = pyaudio.PyAudio()
 

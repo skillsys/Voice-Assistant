@@ -1,11 +1,11 @@
 import pvrhino
 import pyaudio
 import struct
-import config
-access_key = config.access_key
-context_path = config.context_path
+from config import access_key
 
-handle = pvrhino.create(access_key=access_key, context_path=context_path)
+
+
+handle = pvrhino.create(access_key=access_key, context_path=".\\Ai_models\\dateTime_en_windows.rhn")
 
 pa = pyaudio.PyAudio()
 

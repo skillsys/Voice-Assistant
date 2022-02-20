@@ -4,7 +4,7 @@ import struct
 import pyaudio
 import pyttsx3
 import whatis_module
-import config
+from config import access_key
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -18,13 +18,12 @@ def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 
-access_key = config.access_key
-context = config.context_path
-keywords_path = config.keywords_path
 
 
-rhino = pvrhino.create(access_key=access_key, context_path=context)
-porcupine = pvporcupine.create(keywords=["computer", "jarvis"] , access_key=access_key , keyword_paths=keywords_path)
+
+
+rhino = pvrhino.create(access_key=access_key, context_path=".\\Ai_models\\dateTime_en_windows.rhn")
+porcupine = pvporcupine.create(access_key=access_key , keyword_paths=['.\\Ai_models\\hey-sam_en_windows.ppn'])
 pa = pyaudio.PyAudio()
 
 assert porcupine.sample_rate == rhino.sample_rate
