@@ -6,7 +6,7 @@ import random
 
 class whatis():
     global me
-    me = ["boss" , "sir" , "administrator", "commander"]
+    me = ["boss" , "sir"]
     def __init__(self):
         pass
         

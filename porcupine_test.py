@@ -13,7 +13,7 @@ sen = [0.5]
 
 
 try:
-    porcupine = pvporcupine.create(access_key=access_key , keyword_paths=['.\\Ai_models\\hey-sam_en_windows.ppn'] , sensitivities=sen)
+    porcupine = pvporcupine.create(access_key=access_key , keyword_paths=['./Ai_models\\hey-sam_en_windows.ppn'] , sensitivities=sen)
 
     pa = pyaudio.PyAudio()
 

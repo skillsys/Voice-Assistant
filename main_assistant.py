@@ -5,11 +5,18 @@ import pyaudio
 import pyttsx3
 import whatis_module
 from config import access_key
+from os.path import dirname
+path = dirname(__file__)
+
+
+
+
+
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 # print(voices[1].id)
-print(engine.getProperty('rate'))
+
 engine.setProperty('voice', voices[1].id )
 engine.setProperty('rate' , 195)
 
@@ -21,9 +28,8 @@ def speak(audio):
 
 
 
-
-rhino = pvrhino.create(access_key=access_key, context_path=".\\Ai_models\\dateTime_en_windows.rhn")
-porcupine = pvporcupine.create(access_key=access_key , keyword_paths=['.\\Ai_models\\hey-sam_en_windows.ppn'])
+rhino = pvrhino.create(access_key=access_key, context_path=f'{path}/Ai_models\\dateTime_en_windows.rhn')
+porcupine = pvporcupine.create(access_key=access_key , keyword_paths=[f'{path}/Ai_models\\hey-sam_en_windows.ppn'])
 pa = pyaudio.PyAudio()
 
 assert porcupine.sample_rate == rhino.sample_rate
