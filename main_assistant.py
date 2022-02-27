@@ -45,7 +45,7 @@ audio_stream = pa.open(
                 input=True,
                 frames_per_buffer=frame_length)
 
-wkd = False
+wkd = False #wake word detected
 while True:
     pcm = audio_stream.read(frame_length)
     audio_frame = struct.unpack_from("h" * frame_length, pcm)
@@ -68,7 +68,6 @@ while True:
             else:
                 intent = inference.intent
                 slots = inference.slots
-                print(type(intent))
                 speak(whatis.process(slots["TD"]))
                 
 
